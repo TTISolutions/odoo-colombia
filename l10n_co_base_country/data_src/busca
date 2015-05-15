@@ -1,9 +1,0 @@
-while read linea
-do
- id=`echo $linea | awk -F, '{print $1}'`
- pais=`echo $linea | awk -F, '{print $2}' | tr -d '\n' | tr -d '\r'`
-
-echo "        <record id=\"base.$id\" model=\"res.country\">            
-            <field name=\"code_dian\">$pais</field>        
-        </record>"
-done < codigo_dian.csv
