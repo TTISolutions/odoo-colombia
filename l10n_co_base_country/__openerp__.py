@@ -3,9 +3,12 @@
     'name': "DIAN (Colombia) country code",
 
     'summary': """
-        Códigos dian para paises""",
-
+            Códigos dian para paises
+    """,
     'description': """
+*Códigos dian para paises
+
+http://www.dian.gov.co/descargas/formularios/2007/tab-codigos/paises.pdf
     """,
 
     'author': "FONSE SAS",
