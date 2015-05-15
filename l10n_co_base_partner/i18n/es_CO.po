@@ -51,14 +51,3 @@ msgstr "Segundo Nombre"
 #: model:ir.model,name:l10n_co_base_partner.model_res_users
 msgid "Users"
 msgstr "Usuario"
-
-#. module: l10n_co_base_partner
-#: view:res.partner:l10n_co_base_partner.view_partner_simple_form
-msgid "{'readonly': [('is_company', '=', False)], 'required': [('is_company', '=', True)], 'default_focus': [('is_company', '=', True)]}"
-msgstr ""
-
-#. module: l10n_co_base_partner
-#: view:res.partner:l10n_co_base_partner.view_partner_form
-msgid "{'readonly': [('is_company', '=', False)], 'required': [('is_company', '=', True)]}"
-msgstr ""
-
