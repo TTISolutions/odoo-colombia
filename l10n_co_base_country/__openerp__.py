@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "l10n_co_base_country",
+    'name': "DIAN (Colombia) country code",
 
     'summary': """
         Códigos dian para paises""",
