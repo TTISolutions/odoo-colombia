@@ -32,18 +32,28 @@ class ResPartner(models.Model):
     @api.multi
     def person_name(self,values):
         values = values or {}
-        person_names = set(['first_name', 'middle_name', 'last_name', 'second_last_name'])
+        person_field = ['first_name', 'middle_name', 'last_name', 'second_last_name']
+        person_names = set(person_field)
         values_keys = set(values.keys())
         if person_names.intersection(values_keys):
+            for person in person_field:
+                if values.get(person, False):
+                    values.update({
+                        person: values.get(person).strip(),
+                    })
             names = [name for name in [values.get('first_name', False) or self.first_name,
                                        values.get('middle_name', False) or self.middle_name, 
                                        values.get('last_name', False) or self.last_name, 
                                        values.get('second_last_name', False) or self.second_last_name] if name]
             name = ' '.join(names)
-            if name != self.name:
+            if name and (name != self.name):
                 values.update({
-                    'name': ' '.join(names),
+                    'name': name,
                 })
+        if values.get('name', False):
+            values.update({
+                'name': values.get('name').strip(),
+            })
         return values
         
     @api.multi
